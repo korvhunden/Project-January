@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/pictures">
+        <file>YAHTZEE BACKGROUND TWO.png</file>
+        <file>YAHTZEE BACKGROUND TWO 2.png</file>
+    </qresource>
+</RCC>
