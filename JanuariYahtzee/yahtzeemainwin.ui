@@ -281,6 +281,9 @@
      </item>
      <item row="18" column="0" rowspan="2">
       <widget class="QPushButton" name="A19">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -477,6 +480,9 @@
      </item>
      <item row="6" column="0">
       <widget class="QPushButton" name="A7">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -505,6 +511,9 @@
      </item>
      <item row="7" column="0">
       <widget class="QPushButton" name="A8">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -660,6 +669,9 @@
      </item>
      <item row="6" column="0">
       <widget class="QPushButton" name="B7">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -884,6 +896,9 @@
      </item>
      <item row="7" column="0">
       <widget class="QPushButton" name="B8">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -940,6 +955,9 @@
      </item>
      <item row="18" column="0" rowspan="2">
       <widget class="QPushButton" name="B19">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1347,6 +1365,9 @@
      </item>
      <item row="18" column="0" rowspan="2">
       <widget class="QPushButton" name="C19">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1543,6 +1564,9 @@
      </item>
      <item row="6" column="0">
       <widget class="QPushButton" name="C7">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1571,6 +1595,9 @@
      </item>
      <item row="7" column="0">
       <widget class="QPushButton" name="C8">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1978,6 +2005,9 @@
      </item>
      <item row="18" column="0" rowspan="2">
       <widget class="QPushButton" name="D19">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2006,6 +2036,9 @@
      </item>
      <item row="7" column="0">
       <widget class="QPushButton" name="D8">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2202,6 +2235,9 @@
      </item>
      <item row="6" column="0">
       <widget class="QPushButton" name="D7">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2281,6 +2317,107 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgba(81, 108, 108, 133);</string>
     </property>
+   </widget>
+   <widget class="QGraphicsView" name="optionsBackground">
+    <property name="geometry">
+     <rect>
+      <x>435</x>
+      <y>36</y>
+      <width>211</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/new/pictures/DMPYZY OPTIONS BACKGROUND.png);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="optionsButton">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>10</y>
+      <width>31</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Menu</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>65</y>
+      <width>161</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="menuLayout">
+     <item>
+      <widget class="QLabel" name="menuLabel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Trebuchet MS</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>MENU</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="onePlayerButton">
+       <property name="text">
+        <string>1 Player</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="twoPlayerButton">
+       <property name="text">
+        <string>2 Players</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="threePlayerButton">
+       <property name="text">
+        <string>3 Players</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="fourPlayerButton">
+       <property name="text">
+        <string>4 Players</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+    <zorder>menuLabel</zorder>
+    <zorder>onePlayerButton</zorder>
+    <zorder>twoPlayerButton</zorder>
+    <zorder>threePlayerButton</zorder>
+    <zorder>fourPlayerButton</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

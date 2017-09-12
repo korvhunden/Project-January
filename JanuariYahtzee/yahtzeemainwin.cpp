@@ -31,34 +31,35 @@ YahtzeeMainWin::YahtzeeMainWin(QWidget *parent) :
     }
 
     /*
-     * Disables the sum and bonus pushbuttons, these values are automated by the DiceBrain.
-     */
-    ui->A7->setEnabled(false);
-    ui->A8->setEnabled(false);
-    ui->A19->setEnabled(false);
-    ui->B7->setEnabled(false);
-    ui->B8->setEnabled(false);
-    ui->B19->setEnabled(false);
-    ui->C7->setEnabled(false);
-    ui->C8->setEnabled(false);
-    ui->C19->setEnabled(false);
-    ui->D7->setEnabled(false);
-    ui->D8->setEnabled(false);
-    ui->D19->setEnabled(false);
-
-    /*
      * Hides the PlayerBlocker overlays
     */
-    ui->playerBlockerA->hide();
-    ui->playerBlockerB->hide();
-    ui->playerBlockerC->hide();
-    ui->playerBlockerD->hide();
+
 
 }
 
 YahtzeeMainWin::~YahtzeeMainWin()
 {
     delete ui;
+}
+
+void YahtzeeMainWin::hideOptionsOnClick()
+{
+    // Hides the options menu on buttonclick
+    ui->menuLabel->hide();
+    ui->onePlayerButton->hide();
+    ui->twoPlayerButton->hide();
+    ui->threePlayerButton->hide();
+    ui->fourPlayerButton->hide();
+    ui->optionsBackground->hide();
+}
+
+void YahtzeeMainWin::showPlayerBlockersOnClick()
+{
+    // Shows the playerBlockers on click.
+    ui->playerBlockerA->show();
+    ui->playerBlockerB->show();
+    ui->playerBlockerC->show();
+    ui->playerBlockerD->show();
 }
 
 void YahtzeeMainWin::aButtonWasClicked()
@@ -71,5 +72,50 @@ void YahtzeeMainWin::aButtonWasClicked()
     theButton->setEnabled(false);
 
     ui->A7->setText("sum");
-    ui->playerBlockerB->show();
+}
+
+void YahtzeeMainWin::on_onePlayerButton_clicked()
+{
+
+    // First turns on the player blocker windows, then hides them according to how many players are playing.
+    showPlayerBlockersOnClick();
+    hideOptionsOnClick();
+    ui->playerBlockerA->hide();
+}
+
+void YahtzeeMainWin::on_twoPlayerButton_clicked()
+{
+    showPlayerBlockersOnClick();
+    hideOptionsOnClick();
+    ui->playerBlockerA->hide();
+    ui->playerBlockerB->hide();
+}
+
+void YahtzeeMainWin::on_threePlayerButton_clicked()
+{
+    showPlayerBlockersOnClick();
+    hideOptionsOnClick();
+    ui->playerBlockerA->hide();
+    ui->playerBlockerB->hide();
+    ui->playerBlockerC->hide();
+}
+
+void YahtzeeMainWin::on_fourPlayerButton_clicked()
+{
+    showPlayerBlockersOnClick();
+    hideOptionsOnClick();
+    ui->playerBlockerA->hide();
+    ui->playerBlockerB->hide();
+    ui->playerBlockerC->hide();
+    ui->playerBlockerD->hide();
+}
+
+void YahtzeeMainWin::on_optionsButton_clicked()
+{
+    ui->menuLabel->show();
+    ui->onePlayerButton->show();
+    ui->twoPlayerButton->show();
+    ui->threePlayerButton->show();
+    ui->fourPlayerButton->show();
+    ui->optionsBackground->show();
 }
