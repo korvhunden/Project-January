@@ -15,8 +15,12 @@ public:
     explicit YahtzeeMainWin(QWidget *parent = 0);
     ~YahtzeeMainWin();
 
+
 private:
     Ui::YahtzeeMainWin *ui;
+
+private slots:
+    void aButtonWasClicked();
 };
 
 #endif // YAHTZEEMAINWIN_H
