@@ -30,6 +30,7 @@ private slots:
     void on_threePlayerButton_clicked();
     void on_fourPlayerButton_clicked();
     void on_optionsButton_clicked();
+    void on_rollDiceButton_clicked();
 };
 
 #endif // YAHTZEEMAINWIN_H

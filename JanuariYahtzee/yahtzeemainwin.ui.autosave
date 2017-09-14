@@ -2418,7 +2418,7 @@ border-bottom-right-radius: 20;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="rollDiceButton">
     <property name="geometry">
      <rect>
       <x>492</x>
@@ -2498,7 +2498,7 @@ border-bottom-right-radius: 20;</string>
      </item>
     </layout>
    </widget>
-   <zorder>pushButton</zorder>
+   <zorder>rollDiceButton</zorder>
    <zorder>gameBackground</zorder>
    <zorder>optionsBackground</zorder>
    <zorder>gridLayoutWidget_4</zorder>
