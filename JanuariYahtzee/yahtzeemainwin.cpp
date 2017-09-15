@@ -130,6 +130,7 @@ void YahtzeeMainWin::displayDiceOnScreen()
                 ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
 
         // hej gitlol
+            // test uppdatering 17:13
 
         if(diceVector[1] == 1)
             ui->dice2Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
