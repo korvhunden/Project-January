@@ -118,6 +118,8 @@ void YahtzeeMainWin::displayDiceOnScreen()
      * Koden kommr från DenisKormalev från följande sida - https://forum.qt.io/topic/1378/is-it-possible-to-set-a-background-image-to-a-widget
     */
 
+    // Generalisera och korta ned koden tack!
+
             if(diceVector[0] == 1)
                 ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
             else if(diceVector[0] == 2)
