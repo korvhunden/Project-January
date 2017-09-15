@@ -1,7 +1,6 @@
 #include "yahtzeemainwin.h"
 #include "ui_yahtzeemainwin.h"
 #include <QDebug>
-#include <QAbstractButton>
 #include <unistd.h>
 
 
@@ -118,22 +117,19 @@ void YahtzeeMainWin::displayDiceOnScreen()
      * Koden kommr från DenisKormalev från följande sida - https://forum.qt.io/topic/1378/is-it-possible-to-set-a-background-image-to-a-widget
     */
 
-    // Generalisera och korta ned koden tack!
+        if(diceVector[0] == 1)
+             ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
+        else if(diceVector[0] == 2)
+             ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/2dice.png) }");
+        else if(diceVector[0] == 3)
+             ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/3dice.png) }");
+        else if(diceVector[0] == 4)
+             ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/4dice.png) }");
+        else if(diceVector[0] == 5)
+             ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
 
-            if(diceVector[0] == 1)
-                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
-            else if(diceVector[0] == 2)
-                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/2dice.png) }");
-            else if(diceVector[0] == 3)
-                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/3dice.png) }");
-            else if(diceVector[0] == 4)
-                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/4dice.png) }");
-            else if(diceVector[0] == 5)
-                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
-
-        // hej gitlol
-            // test uppdatering 17:13
-            // test 17:20
+        // ändrade lite
+        // fungerar git?
 
         if(diceVector[1] == 1)
             ui->dice2Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
@@ -237,7 +233,7 @@ void YahtzeeMainWin::on_optionsButton_clicked()
 
 void YahtzeeMainWin::on_rollDiceButton_clicked()
 {
-    qDebug() << "KLICKADE PÅ KNAPPEN";
+    //qDebug() << "KLICKADE PÅ KNAPPEN";
     displayDiceOnScreen();
 }
 
