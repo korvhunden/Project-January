@@ -608,6 +608,9 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="Bgrid">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
      <property name="spacing">
       <number>0</number>
      </property>
@@ -1164,6 +1167,9 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="Cgrid">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
      <property name="spacing">
       <number>0</number>
      </property>
@@ -1720,6 +1726,9 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="Dgrid">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
      <property name="spacing">
       <number>0</number>
      </property>
@@ -2418,36 +2427,48 @@ border-bottom-right-radius: 20;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="rollDiceButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>492</x>
-      <y>581</y>
-      <width>101</width>
-      <height>41</height>
+      <x>480</x>
+      <y>10</y>
+      <width>121</width>
+      <height>32</height>
      </rect>
     </property>
     <property name="text">
      <string>Roll</string>
     </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>80</y>
-      <width>101</width>
-      <height>491</height>
+      <x>482</x>
+      <y>70</y>
+      <width>121</width>
+      <height>541</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="diceLayout">
+     <property name="spacing">
+      <number>-1</number>
+     </property>
      <item>
       <widget class="QLabel" name="dice1Label">
        <property name="styleSheet">
         <string notr="true">image: url(:/new/pictures/6dice.png);</string>
        </property>
        <property name="text">
-        <string> </string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -2461,7 +2482,7 @@ border-bottom-right-radius: 20;</string>
 </string>
        </property>
        <property name="text">
-        <string> </string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -2471,8 +2492,11 @@ border-bottom-right-radius: 20;</string>
         <string notr="true">image: url(:/new/pictures/6dice.png);
 </string>
        </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
        <property name="text">
-        <string> </string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -2482,7 +2506,7 @@ border-bottom-right-radius: 20;</string>
         <string notr="true">image: url(:/new/pictures/6dice.png);</string>
        </property>
        <property name="text">
-        <string> </string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -2492,13 +2516,18 @@ border-bottom-right-radius: 20;</string>
         <string notr="true">image: url(:/new/pictures/6dice.png);</string>
        </property>
        <property name="text">
-        <string> </string>
+        <string/>
        </property>
       </widget>
      </item>
     </layout>
+    <zorder>dice3Label</zorder>
+    <zorder>dice4Label</zorder>
+    <zorder>dice5Label</zorder>
+    <zorder>dice2Label</zorder>
+    <zorder>dice1Label</zorder>
    </widget>
-   <zorder>pushButton</zorder>
+   <zorder>layoutWidget</zorder>
    <zorder>gameBackground</zorder>
    <zorder>optionsBackground</zorder>
    <zorder>gridLayoutWidget_4</zorder>
@@ -2511,11 +2540,7 @@ border-bottom-right-radius: 20;</string>
    <zorder>playerBlockerD</zorder>
    <zorder>optionsButton</zorder>
    <zorder>layoutWidget</zorder>
-   <zorder>dice5Button</zorder>
-   <zorder>dice4Button</zorder>
-   <zorder>dice3Button</zorder>
-   <zorder>dice2Button</zorder>
-   <zorder>dice1Button</zorder>
+   <zorder>rollDiceButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

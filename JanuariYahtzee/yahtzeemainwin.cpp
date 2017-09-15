@@ -2,6 +2,8 @@
 #include "ui_yahtzeemainwin.h"
 #include <QDebug>
 #include <QAbstractButton>
+#include <unistd.h>
+
 
 
 YahtzeeMainWin::YahtzeeMainWin(QWidget *parent) :
@@ -31,8 +33,6 @@ YahtzeeMainWin::YahtzeeMainWin(QWidget *parent) :
         QWidget *button = ui->Dgrid->itemAt(i)->widget();
         connect(button, SIGNAL(clicked()), this, SLOT(aButtonWasClicked()));
     }
-
-
 }
 
 YahtzeeMainWin::~YahtzeeMainWin()
@@ -57,6 +57,7 @@ void YahtzeeMainWin::optionsButtonClicked()
         }
         ui->optionsBackground->hide();
     }
+
 }
 
 void YahtzeeMainWin::showPlayerBlockersOnClick()
@@ -104,6 +105,79 @@ void YahtzeeMainWin::chooseAmountOfPlayers(int num)
         break;
     }
     }
+
+}
+
+void YahtzeeMainWin::displayDiceOnScreen()
+{
+    diceVector = {2,1,4,5,3};
+    qDebug() << "HEHEHEHEHHE";
+
+    /*
+     * lägger in nya tärningsbilder i ui->diceLabel beroende på vad man rollade på tärningen
+     * Koden kommr från DenisKormalev från följande sida - https://forum.qt.io/topic/1378/is-it-possible-to-set-a-background-image-to-a-widget
+    */
+
+            if(diceVector[0] == 1)
+                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
+            else if(diceVector[0] == 2)
+                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/2dice.png) }");
+            else if(diceVector[0] == 3)
+                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/3dice.png) }");
+            else if(diceVector[0] == 4)
+                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/4dice.png) }");
+            else if(diceVector[0] == 5)
+                ui->dice1Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
+
+
+
+        if(diceVector[1] == 1)
+            ui->dice2Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
+        else if(diceVector[1] == 2)
+            ui->dice2Label->setStyleSheet("QWidget {image: url(:/new/pictures/2dice.png) }");
+        else if(diceVector[1] == 3)
+            ui->dice2Label->setStyleSheet("QWidget {image: url(:/new/pictures/3dice.png) }");
+        else if(diceVector[1] == 4)
+            ui->dice2Label->setStyleSheet("QWidget {image: url(:/new/pictures/4dice.png) }");
+        else if(diceVector[1] == 5)
+            ui->dice2Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
+
+
+
+        if(diceVector[2] == 1)
+            ui->dice3Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
+        else if(diceVector[2] == 2)
+            ui->dice3Label->setStyleSheet("QWidget {image: url(:/new/pictures/2dice.png) }");
+        else if(diceVector[2] == 3)
+            ui->dice3Label->setStyleSheet("QWidget {image: url(:/new/pictures/3dice.png) }");
+        else if(diceVector[2] == 4)
+            ui->dice3Label->setStyleSheet("QWidget {image: url(:/new/pictures/4dice.png) }");
+        else if(diceVector[2] == 5)
+            ui->dice3Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
+
+
+        if(diceVector[3] == 1)
+            ui->dice4Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
+        else if(diceVector[3] == 2)
+            ui->dice4Label->setStyleSheet("QWidget {image: url(:/new/pictures/2dice.png) }");
+        else if(diceVector[3] == 3)
+            ui->dice4Label->setStyleSheet("QWidget {image: url(:/new/pictures/3dice.png) }");
+        else if(diceVector[3] == 4)
+            ui->dice4Label->setStyleSheet("QWidget {image: url(:/new/pictures/4dice.png) }");
+        else if(diceVector[3] == 5)
+            ui->dice4Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
+
+
+        if(diceVector[4] == 1)
+            ui->dice5Label->setStyleSheet("QWidget {image: url(:/new/pictures/1dice.png) }");
+        else if(diceVector[4] == 2)
+            ui->dice5Label->setStyleSheet("QWidget {image: url(:/new/pictures/2dice.png) }");
+        else if(diceVector[4] == 3)
+            ui->dice5Label->setStyleSheet("QWidget {image: url(:/new/pictures/3dice.png) }");
+        else if(diceVector[4] == 4)
+            ui->dice5Label->setStyleSheet("QWidget {image: url(:/new/pictures/4dice.png) }");
+        else if(diceVector[4] == 5)
+            ui->dice5Label->setStyleSheet("QWidget {image: url(:/new/pictures/5dice.png) }");
 
 }
 
@@ -159,5 +233,8 @@ void YahtzeeMainWin::on_optionsButton_clicked()
 
 void YahtzeeMainWin::on_rollDiceButton_clicked()
 {
-
+    qDebug() << "KLICKADE PÅ KNAPPEN";
+    displayDiceOnScreen();
 }
+
+
